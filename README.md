@@ -8,13 +8,18 @@
 
 | Repository                                                           | Pull request                                                                       |
 | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| [Repo link >>](https://github.com/musangamfure/hello-rails-back-end) | [Pull request Here >>](https://github.com/musangafure/hello-rails-back-end/pull/1) |
+| [Repo link >>](https://github.com/musangamfure/hello-rails-back-end) | [Pull request Here >>](https://github.com/musangamfure/hello-rails-back-end/pull/1) |
 
 ## Built With
 
 - React JS & Redux
 - CSS
 - JavaScript
+
+### Key Features <a name="key-features"></a>
+
+- **Random Greetings**
+
 
 ## Getting Started
 
