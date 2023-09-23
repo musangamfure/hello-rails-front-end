@@ -1,16 +1,42 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
+# Hello rails front-end
 
-# Hello React-Rails-Frontend
+<a name="readme-top"></a>
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+- [API](#api)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 [Hello rails front-end] <a name="about-project"></a>
 
 > A simple web api application that has a front-end built using React JS and uses a web service from a ruby on rails driven backend
 
-## Backend Repository
+## API <a name="api"></a>
 
 | Repository                                                           | Pull request                                                                       |
 | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | [Repo link >>](https://github.com/musangamfure/hello-rails-back-end) | [Pull request Here >>](https://github.com/musangamfure/hello-rails-back-end/pull/1) |
 
-## Built With
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
 
 - React JS & Redux
 - CSS
@@ -21,7 +47,7 @@
 - **Random Greetings**
 
 
-## Getting Started
+## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running follow these simple example steps.
 
@@ -52,7 +78,7 @@ Install all project dependencies by running the command below
 $ npm install
 ```
 
-### Tests
+### Run Tests
 
 To run all tests type the command below
 
@@ -68,12 +94,6 @@ Start the http application server
 $ npm start
 ```
 
-### Visit Application
-
-```
-$ http://localhost:3000
-```
-
 ### Authors
 
 👤 **Musangamfura Emmmanuel**
@@ -82,20 +102,26 @@ $ http://localhost:3000
 - [Twitter](https://twitter.com/musangamfure)
 - [LinkedIn](https://www.linkedin.com/in/musangamfurae)
 
-## 🤝 Contributing
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[Improve the UI]**
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/musangamfure/hello-rails-front-end/issues).
 
-## Show your support
+## ⭐️ Show your support <a name="support"></a>
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 - Hat tip to [Microverse](https://bit.ly/MicroverseTN) for giving me this project to work on
 
-## 📝 License
+##  📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
