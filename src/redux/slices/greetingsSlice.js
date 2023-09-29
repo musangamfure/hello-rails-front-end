@@ -1,34 +1,35 @@
-import axios from 'axios';
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-
-const BASE_URL = 'http://localhost:3000/api/v1/greetings';
-const http = axios.create({ baseURL: BASE_URL });
+import { createSlice } from '@reduxjs/toolkit';
+import fetchGreeting from '../thunk';
 
 const initialState = {
-  isLoading: false,
-  isFaild: false,
-  greetings: [],
+  greeting: '',
+  isLoading: true,
+  error: false,
+  errMsg: '',
 };
 
-export const fetchGreetingsThunk = createAsyncThunk(
-  'greetings/fetchGreetings',
-  async () => {
-    const { data } = await http.get();
-    return data.greeting;
-  },
-);
-
-const greetingsSlice = createSlice({
-  name: 'greetings',
+const greetingSlice = createSlice({
+  name: 'greeting',
   initialState,
-  extraReducers: {
-    [fetchGreetingsThunk.fulfilled]: (state, action) => {
-      state.isLoading = false;
-      state.greetings = action.payload;
-    },
-    [fetchGreetingsThunk.pending]: (state) => { state.isLoading = true; },
-    [fetchGreetingsThunk.rejected]: (state) => { state.isFaild = true; },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchGreeting.pending, (state) => {
+        state.isLoading = true;
+        state.error = false; // Reset the error flag on pending
+        state.errMsg = ''; // Reset the error message on pending
+      })
+      .addCase(fetchGreeting.fulfilled, (state, action) => {
+        state.greeting = action.payload.message;
+        state.isLoading = false;
+        state.error = false; // Reset the error flag on fulfillment
+        state.errMsg = ''; // Reset the error message on fulfillment
+      })
+      .addCase(fetchGreeting.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = true;
+        state.errMsg = action.payload.error; // Access the error message from the payload
+      });
   },
 });
 
-export default greetingsSlice.reducer;
+export default greetingSlice.reducer;
