@@ -12,7 +12,7 @@ const fetchGreeting = createAsyncThunk(
     } catch (e) {
       return thunkAPI.rejectWithValue({ error: e.message });
     }
-  }
+  },
 );
 
 export default fetchGreeting;
