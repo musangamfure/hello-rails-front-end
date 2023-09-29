@@ -1,20 +1,17 @@
-import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { Routes, Route } from 'react-router-dom'; // Remove BrowserRouter
+import store from './redux/store';
 import Greeting from './components/Greeting';
-import Home from './components/Home';
-import NaVBar from './components/NavBar';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <NaVBar />
-        <Routes>
-          <Route exact path="/*" element={<Home />} />
-          <Route exact path="/greet" element={<Greeting />} />
-        </Routes>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Routes>
+        <Route path="/" element={<Greeting />} />
+      </Routes>
+    </Provider>
   );
 }
 
